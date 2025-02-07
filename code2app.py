@@ -13,6 +13,9 @@ from PIL import Image
 import os
 import gdown
 
+# Set page configuration for full responsiveness
+st.set_page_config(page_title="FloraFly 🍃🦋", layout="wide")
+
 # Google Drive file ID
 file_id = "161Wwj3OAtVXHRCsztE2VxWttDDAKWkI1"
 model_path = "vgg16_fold_1.keras"
@@ -68,28 +71,34 @@ with tabs[0]:
     st.subheader("Discover. Identify. Conserve.")
 
     st.write(
-        "Nature's little wonders are just a click away! **FloraFly** is an AI-powered butterfly classification tool "
-        "designed to help researchers, conservationists, and nature lovers **identify butterfly families effortlessly**."
+    "🌿🦋 **Nature's little wonders are just a click away!** "
+    "Welcome to **FloraFly**, an AI-powered butterfly classification tool designed to assist researchers, conservationists, and nature enthusiasts. "
+    "With cutting-edge deep learning technology, **FloraFly** makes it easy to **identify butterfly families effortlessly**, helping you explore and understand butterfly biodiversity like never before!"
     )
 
     # Create an engaging layout
     col1, col2 = st.columns(2)
     
     with col1:
-        st.image(r"E:\python\alfred-schrock-shoE2y51uX0-unsplash.jpg", caption="Explore Butterfly Species", use_container_width=True)
+        st.image(r"/workspaces/FloraFly/alfred-schrock-shoE2y51uX0-unsplash.jpg", caption="Explore Butterfly Species", use_container_width=True)
 
     with col2:
         st.write("### 🦋 How It Works?")
-        st.write("✅ **Upload or Capture** – Snap a photo or upload an image of a butterfly.")
-        st.write("✅ **AI-Powered Recognition** – Our deep learning model quickly identifies the butterfly’s family.")
-        st.write("✅ **Interactive Visuals** – Explore AI-driven Grad-CAM heatmaps to see what features influenced the classification.")
-        st.write("✅ **Insights & Analytics** – Dive into classification confidence levels and model performance metrics.")
+        st.write("Our AI-powered butterfly identification tool makes classification effortless and insightful. Here's how you can use it:")
+
+        st.write("✅ **Upload or Capture** – Snap a real-time photo using your device's camera or upload an image from your gallery. Supported formats include JPG and PNG.")
+
+        st.write("✅ **AI-Powered Recognition** – Leveraging state-of-the-art deep learning models, the system swiftly analyzes your image and predicts the butterfly’s family with high accuracy.")
+
+        st.write("✅ **Interactive Visuals** – Gain deeper insights into AI-driven decision-making with Grad-CAM heatmaps. These visualizations highlight the most influential regions of the butterfly that contributed to the classification.")
+
+        st.write("✅ **Seamless Experience** – Enjoy a user-friendly interface with real-time processing, ensuring an intuitive and engaging way to explore butterfly biodiversity.")
 
     # Highlight the purpose
     st.write("### 🌍 Why Use FloraFly?")
-    st.write("🔬 **Precision-driven AI** – Powered by advanced deep learning models.")
-    st.write("📸 **User-Friendly & Interactive** – Simple image upload, intuitive results.")
-    st.write("🦋 **For Conservation & Research** – A step towards understanding and protecting butterfly biodiversity.")
+    st.write("🔬 **Precision-Driven AI** – Harnessing cutting-edge deep learning models, FloraFly ensures accurate and reliable butterfly family identification.")
+    st.write("📸 **User-Friendly & Interactive** – Simply upload an image or capture one in real-time to receive instant results with intuitive visualizations.")
+    st.write("🦋 **Empowering Conservation & Research** – A valuable tool for researchers, conservationists, and nature enthusiasts to study and protect butterfly biodiversity.")
 
     # CTA section
     st.markdown("### **🦋 Ready to Explore?**")
@@ -158,7 +167,7 @@ with tabs[1]:
 
     # Add a final encouragement section
     st.markdown("---")
-    st.write("🌟 **Tip:** For best results, use high-quality images with a clear butterfly view.")
+    st.write("🌟 **Tip:** For best results, use high-quality images with a clear butterfly view with image size 224x224.")
 
 
 
@@ -173,18 +182,19 @@ with tabs[2]:
 
         with col1:
             # Display an illustration for guidance
-            st.image(r"E:\python\krzysztof-niewolny-T3EzlprIYDk-unsplash.jpg", caption="🦋 Upload an image to classify!", use_container_width=True)
+            st.image(r"/workspaces/FloraFly/krzysztof-niewolny-T3EzlprIYDk-unsplash.jpg", caption="🦋 Upload an image to classify!", use_container_width=True)
 
         with col2:
             # Add guidance for the user
             st.markdown("""
-                ### 🛠 How It Works?
-                1. **Go to the 'Upload Image' tab** and provide an image of a butterfly.
-                2. Our **AI model** will analyze and classify the butterfly family.
-                3. You'll get **detailed insights** with confidence scores and visualizations!
-                
-                🔍 **Upload an image to get started!**
+            ### 🛠 How It Works?
+            1. **Navigate to the 'Upload Image' tab** – Capture a photo or upload an image of a butterfly.
+            2. **AI-Powered Classification** – Our deep learning model quickly analyzes the image and predicts the butterfly family.
+            3. **Detailed Insights & Visualizations** – View confidence scores, AI-driven Grad-CAM heatmaps, and classification metrics to understand the model's decision-making.
+
+            🔍 **Upload an image now and let AI reveal the butterfly's identity!** 🦋
             """)
+
         
         # Display a message when no image is uploaded
         st.info("📸 **No image uploaded yet.** Please upload an image in the **Upload Image** tab to see classification results.")
@@ -239,18 +249,22 @@ with tabs[3]:
         col1, col2 = st.columns([1, 1])
         # Display a placeholder butterfly image
         with col1:
-            st.image(r"E:\python\yuichi-kageyama-4ByFHyNdoD4-unsplash.jpg", caption="🦋 Upload an image to generate a heatmap!", use_container_width=True)
+            st.image(r"/workspaces/FloraFly/yuichi-kageyama-4ByFHyNdoD4-unsplash.jpg", caption="🦋 Upload an image to generate a heatmap!", use_container_width=True)
         
         # Explain what Grad-CAM is in an interactive way
         with col2:
             st.markdown("""
-                ### 🔎 What is Grad-CAM?
-                - Grad-CAM (**Gradient-weighted Class Activation Mapping**) is a **visualization tool** that highlights the important 
-                regions of an image that influenced the AI’s prediction.
-                - **The more intense the red regions, the more important they were in classification!** 🔥
-                
-                👉 **Upload an image** to generate a Grad-CAM heatmap!
+            ### 🔎 What is Grad-CAM?
+            Grad-CAM (**Gradient-weighted Class Activation Mapping**) is an **AI-powered visualization technique** that helps you understand how the model makes predictions. It highlights the most influential regions of an image that contributed to the classification.
+
+            🔹 **How It Works:**  
+            - The model analyzes the image and assigns importance to different regions.  
+            - Areas with **intense red coloration** indicate the most crucial features used for classification. 🔥  
+            - This helps researchers and users interpret AI decisions and gain insights into butterfly characteristics.
+
+            👉 **Upload an image** to generate a Grad-CAM heatmap and explore how AI sees the world of butterflies! 🦋
             """)
+
         st.info("📸 **No image uploaded yet.** Please upload an image in the **Upload Image** tab to generate Grad-CAM visualizations.")
     
     else:
@@ -298,7 +312,7 @@ with tabs[3]:
 
 
 # Define storage directory
-HISTORY_DIR = r"E:\python\History\Classification_history"
+HISTORY_DIR = r"/workspaces/FloraFly/History/classification_history"
 CSV_HISTORY_FILE = os.path.join(HISTORY_DIR, "classification_history.csv")
 
 # Ensure directory exists
@@ -391,15 +405,17 @@ with tabs[5]:
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        st.image(r"E:\python\volumetric-drop-with-ecosystem-inside-generative-ai.jpg", caption="🐛 ➡️ 🦋 AI for Conservation", use_container_width =True)
+        st.image(r"/workspaces/FloraFly/volumetric-drop-with-ecosystem-inside-generative-ai.jpg", caption="🐛 ➡️ 🦋 AI for Conservation", use_container_width =True)
 
     with col2:
         st.subheader("🌿 About FloraFly")
         st.write(
-            "**FloraFly** is an AI-powered butterfly classification tool designed to help researchers, conservationists, "
-            "and nature enthusiasts **identify butterfly families with precision**. Using state-of-the-art deep learning, "
-            "FloraFly brings technology and biodiversity together to support conservation efforts. 🦋✨"
+        "**FloraFly** is an AI-powered butterfly classification tool designed to assist researchers, conservationists, "
+        "and nature enthusiasts in **accurately identifying butterfly families**. "
+        "Powered by **state-of-the-art deep learning**, FloraFly bridges the gap between technology and biodiversity, "
+        "helping to advance conservation efforts and ecological research. 🦋✨"
         )
+
 
     # Divider for clean separation
     st.markdown("---")
