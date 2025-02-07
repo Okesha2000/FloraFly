@@ -443,13 +443,4 @@ with tabs[5]:
     st.markdown("---")
     st.write("🚀 **Join us in using AI to conserve nature—one butterfly at a time!** 🦋")
 
-Ensure full responsiveness
-st.markdown("""
-    <style>
-        .block-container { max-width: 100% !important; }
-        .stMarkdownContainer { font-size: 25px !important; },
-        .stTabs button { flex-grow: 1; text-align: center; font-size: 40px !important; font-weight: bold !important; }
-        html, body, .stTextInput input, .stFileUploader label, .stButton button, .stMarkdown { font-size: 25px !important; }, .stDataFrame, .stRadio, 
-        .stCheckbox label, .stSelectbox, .stTextArea, .stSlider, .stMetric { font-size: 25px !important; }
-    </style>
-""", unsafe_allow_html=True)
+
