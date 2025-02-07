@@ -80,7 +80,7 @@ with tabs[0]:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.image(r"/workspaces/FloraFly/alfred-schrock-shoE2y51uX0-unsplash.jpg", caption="Explore Butterfly Species", use_container_width=True)
+        st.image(r"alfred-schrock-shoE2y51uX0-unsplash.jpg", caption="Explore Butterfly Species", use_container_width=True)
 
     with col2:
         st.write("### 🦋 How It Works?")
@@ -182,7 +182,7 @@ with tabs[2]:
 
         with col1:
             # Display an illustration for guidance
-            st.image(r"/workspaces/FloraFly/krzysztof-niewolny-T3EzlprIYDk-unsplash.jpg", caption="🦋 Upload an image to classify!", use_container_width=True)
+            st.image(r"krzysztof-niewolny-T3EzlprIYDk-unsplash.jpg", caption="🦋 Upload an image to classify!", use_container_width=True)
 
         with col2:
             # Add guidance for the user
@@ -249,7 +249,7 @@ with tabs[3]:
         col1, col2 = st.columns([1, 1])
         # Display a placeholder butterfly image
         with col1:
-            st.image(r"/workspaces/FloraFly/yuichi-kageyama-4ByFHyNdoD4-unsplash.jpg", caption="🦋 Upload an image to generate a heatmap!", use_container_width=True)
+            st.image(r"yuichi-kageyama-4ByFHyNdoD4-unsplash.jpg", caption="🦋 Upload an image to generate a heatmap!", use_container_width=True)
         
         # Explain what Grad-CAM is in an interactive way
         with col2:
@@ -312,7 +312,7 @@ with tabs[3]:
 
 
 # Define storage directory
-HISTORY_DIR = r"/workspaces/FloraFly/History/classification_history"
+HISTORY_DIR = r"History/classification_history"
 CSV_HISTORY_FILE = os.path.join(HISTORY_DIR, "classification_history.csv")
 
 # Ensure directory exists
@@ -405,7 +405,7 @@ with tabs[5]:
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        st.image(r"/workspaces/FloraFly/volumetric-drop-with-ecosystem-inside-generative-ai.jpg", caption="🐛 ➡️ 🦋 AI for Conservation", use_container_width =True)
+        st.image(r"volumetric-drop-with-ecosystem-inside-generative-ai.jpg", caption="🐛 ➡️ 🦋 AI for Conservation", use_container_width =True)
 
     with col2:
         st.subheader("🌿 About FloraFly")
