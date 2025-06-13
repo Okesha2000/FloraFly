@@ -7,3 +7,4 @@ scikit-learn
 matplotlib
 grad-cam
 gdown
+opencv-python
